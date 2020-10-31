@@ -6,7 +6,7 @@ function Child() {
     let { transaction, addTransaction } = useContext(TransactionContext);
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState(0);
-
+        console.log(newAmount,newDesc)
 
 
     const handleAddition = (event) => {
@@ -15,7 +15,6 @@ function Child() {
             amount: newAmount,
             desc: newDesc
         })
-        //   "event.preventDefault()" is  used to dnt reload the browser                  
     }
 
     return (
@@ -56,7 +55,7 @@ function Child() {
                     <input type="number" onChange={(ev) => setAmount(ev.target.value)} required></input>
                 </label>
                 <br />
-                <input type="submit" value="Add Transaction"></input>
+                <input type="submit" value="Add Transaction"  />
             </form>
         </div>
     );
